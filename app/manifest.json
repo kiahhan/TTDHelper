@@ -10,12 +10,14 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "scripts/global.js",
       "scripts/chromereload.js",
       "scripts/background.js"
     ]
   },
   "permissions": [
     "tabs",
+    "activeTab",
     "http://*/*",
     "https://*/*",
     "background"
