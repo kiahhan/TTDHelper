@@ -5,29 +5,40 @@
   <meta charset="utf-8">
   <!-- build:css styles/popup-vendor.css -->
   <!-- bower:css -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css styles/main.css -->
-  <link href="styles/main.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet"> 
   <!-- endbuild -->
 </head>
 
 <body>
-  <h1>Newegg online TroubleShooting tool</h1>
-  <input type="button" id="tryBtn" value="Try it." />
-  <div id="container">
+  <div class="container">
+    <div class="row">
+      <div id="header">
+        <h3>Newegg online TroubleShooting tool</h3>
+      </div>  
+    </div>
+    <div class="row">  
+      <div id="textline"></div>
+    </div>
+    <div class="row">
+      <div id="hack" class="col-md-4"><input type="button" id="hackBtn" value="Hack It!" /></div>
+      <div id="open" class="col-md-4"><input type="button" id="openBtn" value="Get URL" /></div>      
+      <div id="new" class="col-md-4 hidden"><input type="button" id="newtabBtn" value="Open in New tab" /></div>
+    </div>
+    <!-- build:js scripts/popup-vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/popup.js -->
+    <script src="scripts/global.js"></script>
+    <script src="scripts/popup.js"></script>
+    <!-- endbuild -->
   </div>
-  <div id="open"><input type="button" id="openBtn" value="Open This URL" /></div>
-  <div id="hack"><input type="button" id="hackBtn" value="Hack It!" /></div>
-  <!-- build:js scripts/popup-vendor.js -->
-  <!-- bower:js -->
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:js scripts/popup.js -->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="scripts/global.js"></script>
-  <script src="scripts/popup.js"></script>
-  <!-- endbuild -->
 </body>
 
 </html>

@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(details => {
 });
 
 
-chrome.tabs.onUpdated.addListener((_, details) => {
+chrome.tabs.onUpdated.addListener((_, details, tab) => {
   setBadge(details.url);
 });
 
@@ -22,7 +22,7 @@ chrome.tabs.onActivated.addListener(event => {
 console.log('\'Allo \'Allo! Event Page for Browser Action');
 
 function setBadge(url) {
-  if (detectNewegg(url)) {
+  if (detectNewegg(url)>=0) {
     chrome.browserAction.setBadgeText({
       text: 'neg'
     });
